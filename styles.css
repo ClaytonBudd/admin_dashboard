@@ -180,18 +180,16 @@ h1 {
 }
 
 
-/* .card_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-} */
-
 .card {
+
   background-color: white;
   padding: 20px;
   border-radius: 15px;
   border-left: 5px solid orange;
+}
 
+.project_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
