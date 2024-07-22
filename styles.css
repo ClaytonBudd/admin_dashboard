@@ -1,7 +1,7 @@
 body {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: .5fr 1fr 1fr 1fr
 }
 
 ul {
@@ -10,13 +10,11 @@ ul {
 
 header {
   grid-column: 2/5;
-
 }
 
 .top_header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   padding: 20px;
 }
 
@@ -24,7 +22,6 @@ header {
   display: flex;
   align-items: center;
   width: 800px;
-  border: 1px solid red;
   margin-left: 50px;
   padding: 10px;
 }
@@ -40,7 +37,6 @@ img {
   justify-self: end;
   width: 500px;
   margin-right: 100px;
-  border: 1px solid blue;
   padding: 10px;
 }
 
@@ -48,29 +44,34 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
 }
 
 .bottom_left_header {
   display: flex;
-  border: 1px solid red;
   margin-left: 50px;
   padding: 10px;
 }
 
 .large_logo {
   display: flex;
-  border: 1px solid blue;
 }
 
 .header_nav {
   display: flex;
-  color: black;
   width: 500px;
   justify-content: space-between;
   margin-right: 100px;
-  border: 5px solid purple;
 }
+
+.header_nav a {
+  background-color: #0284c7;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+
 
 .searchbar input {
   width: 500px;
@@ -86,8 +87,6 @@ img {
   background-color: #0284c7;
   color: white;
   list-style: none;
-
-
 }
 
 
@@ -118,20 +117,80 @@ h1 img {
 
 }
 
+.sidebar a:link,
+.sidebar a:visited {
+  text-decoration: none;
+  color: white;
+}
 
 h1 {
   margin-bottom: 50px;
 }
 
+
 .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   grid-column: 2/5;
   grid-row: 2/5;
+  background-color: rgb(235, 233, 233);
+  padding-left: 20px;
 }
 
-a:link,
-a:visited {
-  text-decoration: none;
-  color: white;
 
+.projects {
+  grid-column: 1/2;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr min-content;
+  gap: 20px;
+
+}
+
+.announcements {
+  grid-column: 3;
+  margin-left: 20px;
+
+}
+
+.announcement_card,
+.trending_card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.announcement_title {
+  font-weight: bold;
+
+}
+
+.trending {
+  grid-column: 3;
+  padding: 20px;
+}
+
+.trending_nav a:link,
+.trending_nav a:visited {
+  color: black;
+}
+
+
+/* .card_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+} */
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 5px solid orange;
 
 }
